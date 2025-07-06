@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: linear-gradient(120deg, #1d3557, #457b9d);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1faee;
+}
+
+main {
+    background-color: #1d3557;
+    border: 3px solid #f1faee;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#gameBoard p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    padding: 12px;
+    font-size: 1em;
+    background-color: #f1faee;
+    color: #1d3557;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #a8dadc;
+}
+
+button.correct {
+    background-color: #38b000;
+    color: white;
+}
+
+button.wrong {
+    background-color: #e63946;
+    color: white;
+}
+
+#pointsBoard {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 1.1em;
+}
+
+#pointsBoard p {
+    background-color: #457b9d;
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: 2px solid #f1faee;
+}

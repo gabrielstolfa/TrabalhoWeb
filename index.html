@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio pessoal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!--Fontes-->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+    <!--JS-->
+    <script src="javascript/index.js" defer></script>
+</head>
+<body>
+    <!--Cabeçalho e links de navegação-->
+    <header>
+        <div id="apresentation">
+            <h1>Gabriel Stolfa</h1>
+            <h2>Desenvolvedor Front-end em formação</h2>
+            <h3 class="pulse">Criando com código e propósito!</h3>
+        </div>
+        <div id="headerImgDiv">
+            <img src="imagens/HR-tech.webp" alt="imagem-cabeçalho" class="pulse-img">
+        </div>
+    </header>
+   
+    <nav id="menu">
+       <a href="#aboutMe">Sobre Mim</a>
+       <a href="#academicBackground">Formação</a>
+       <a href="#aboutWorks">Portfólio</a>
+       <a href="">Contato</a>
+    </nav>
+
+    <!--sobre mim -->
+    <main>
+        <section id="aboutMe">
+            <div id="aboutMe-Text">
+            <h2>Sobre Mim</h2>
+            <p>“Sou Gabriel Stolfa, estudante de Análise e Desenvolvimento de Sistemas, apaixonado por desenvolvimento front-end. Gosto de transformar ideias em interfaces bem-feitas e funcionais. No tempo livre, curto treinar na academia, jogar RPG com os amigos e estudar novas tecnologias.”</p>
+            </div>
+           <div id="aboutMe-img">
+             <img src="imagens/cyber-security-expert-working-with-technology-neon-lights.jpg" alt="ilustracao-desenvolvedor">
+           </div>
+        </section>
+
+        <!--minha formação-->
+        <section id="academicBackground">
+            <h2>Formação</h2>
+            <div id="formations">
+            <div id="academy">
+                <h3>🎓UNINTER – Análise e Desenvolvimento de Sistemas</h3>
+                <p>
+                    Em andamento – curso superior focado em lógica, banco de dados, desenvolvimento web e engenharia de software.
+                </p>
+            </div>
+
+            <div id="course">
+                <h3>💻 OneBitCode – Formação Full Stack</h3>
+                <p>Curso prático com foco em desenvolvimento web moderno, abordando front-end (HTML, CSS, JS, React) e back-end com Node.js.</p>
+            </div>
+            </div>
+        </section>
+
+        <!--Portfólio-->
+        <section id="aboutWorks">
+            <h2>Portfólio</h2>
+            <button id="showWorks">Click aqui!</button>
+            <div class="projectCards hidden">
+                <div class="card">
+                    <h3>🧮 Calculadora</h3>
+                    <img src="imagens/calculadora.jpg" alt="calculadora-neon">
+                    <p>Calculadora funcional desenvolvida para reforçar os conhecimentos em JavaScript e manipulação de eventos. O projeto realiza operações básicas (adição, subtração, multiplicação e divisão) com uma interface simples e responsiva</p>
+                    <a href="projeto1/index.html" target="_blank">🔗 Ver Projeto</a>
+                </div>
+
+                <div class="card">
+                    <h3>🎮 Jogo de Perguntas</h3>
+                    <img src="imagens/cerebro.jpg" alt="cerebro-neon">
+                    <p>Jogo interativo de perguntas e respostas, desenvolvido para praticar lógica de programação e manipulação de DOM com JavaScript. O jogador responde perguntas de múltipla escolha e recebe uma pontuação no final. O foco foi criar uma interface intuitiva e uma lógica clara para validação de respostas e controle de pontuação.</p>
+                    <a href="projeto2/index.html" target="_blank">🔗 Ver Projeto</a>
+                </div>
+
+                <div class="card">
+                    <h3>🍔 Projeto: Sistema de Pedidos - Lanchonete</h3>
+                    <img src="imagens/lanche.jpg" alt="lanche-neon">
+                    <p>Sistema simples para simular pedidos em uma lanchonete. O usuário pode selecionar itens do cardápio, visualizar o total da compra e finalizar o pedido. Desenvolvido com foco em prática de manipulação de arrays, eventos e interação com a interface em tempo real.</p>
+                    <a href="projeto3/index.html" target="_blank">🔗Ver Projeto</a>
+                </div>
+            </div>
+        </section>
+
+        <!--Formulário para contato -->
+        <section id="contact">
+            <div id="contactDiv">
+            <h2>Entre em contato</h2>
+            <form action="#" method="post">
+                <div class="formCard">
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+
+                <div class="formCard">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                </div>
+
+                <div class="formCard">
+                    <label for="message">Mensagem:</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <button id="formBtn">Enviar</button>
+            </form>
+            </div>
+        </section>
+    </main>
+
+    <!--encerramento-->
+    <footer id="footer">
+  <p>© 2025 Gabriel Stolfa. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>

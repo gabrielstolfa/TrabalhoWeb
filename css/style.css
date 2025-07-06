@@ -1,0 +1,457 @@
+/*Resetando configurações*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+/* Estilização do Cabeçalho*/
+header{
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: linear-gradient(135deg, #050509, #0a0f2c, #003f5c, #0077be);
+}
+
+#apresentation {
+    font-family: "Orbitron", sans-serif;
+}
+
+#apresentation h1, 
+#apresentation h2{
+   color: #00bcd4;
+}
+
+#apresentation h3{
+    color:#f1f1f1;
+}
+
+#headerImgDiv img {
+    width: 100%;
+    max-width: 500px;  
+    mix-blend-mode: screen;
+    box-shadow: 0px 0px 20px rgba(0, 240, 255, 0.7) ;
+}
+
+#headerImgDiv img:hover{
+    box-shadow: 10px 10px 50px #0077be;
+}
+
+/* Estilizando a animação da imagem */
+.pulse-img {
+  animation: pulse-img 2s infinite ease-in-out; /* definindo e nomeando a animação */
+  transition: transform 0.3s, filter 0.3s;
+  filter: brightness(1) contrast(1);
+}
+
+/*Comportamento da animação */
+@keyframes pulse-img {
+  0% {
+    transform: scale(1);
+    filter: brightness(1) contrast(1); /*estado inicial */
+  }
+  50% {
+    transform: scale(1.03);
+    filter: brightness(1.2) contrast(1.1); /* ponto principal */
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1) contrast(1); /* final, após isso, volta ao começo */
+  } 
+}
+
+/* MENU DE NAVEGAÇÃO */
+#menu {
+    background-color: #0a0f2c;
+    box-shadow: 0 -10px 15px rgba(10, 15, 44, 0.7);
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:3rem;
+    flex-wrap: wrap;
+}
+
+/*Estilizando os links */
+#menu a {
+    text-decoration: none;
+    color: #00bcd4;
+    font-family: "Orbitron", sans-serif;
+    border: 1px solid #00bcd4;
+    border-radius: 5px;
+    padding:5px;
+    background-color: rgba(0, 188, 212, 0.1);
+    cursor: pointer;
+}
+
+#menu a:hover{
+    background-color: #00f0ff;
+    color: #000;
+    transition: all 0.3s ease;
+}
+
+/*MEDIA QUERY HEADER QUE É O MAIOR */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; 
+    justify-content: center;
+    height: auto; 
+    padding: 2rem 1rem;
+    gap: 2rem; 
+  }
+
+  #apresentation {
+    text-align: center;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  #headerImgDiv img {
+    max-width: 300px; /* reduz imagem para caber melhor */
+    width: 80vw; /* largura relativa à tela */
+    margin: 0 auto;
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.7);
+  }
+
+  /* Ajuste no menu para telas pequenas */
+  #menu {
+    height: auto;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+
+  #menu a {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Sobre Mim Section */
+#aboutMe{
+  font-family: "Orbitron", sans-serif;
+  background: linear-gradient(180deg, #0c0f24, #0e142f);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  border-top: 1px solid rgba(0,188,212,0.3);
+  padding: 10px;
+  opacity: 0; /* começa invisível */
+  animation: showText 1.2s ease-out forwards;
+  animation-delay: 0.2s; /* pequeno atraso opcional */
+
+}
+
+#aboutMe h2{
+  color:#00bcd4;
+  border: 4px solid #00f0ff;
+  padding:5px;
+  text-align: center;
+
+}
+
+#aboutMe p {
+  color:#e0f7fa;
+  font-size: 18px;
+  line-height: 1.6;
+  text-align: justify;
+  margin: auto;
+  max-width: 700px;
+}
+
+#aboutMe-img{
+  margin-top: 20px;
+}
+
+#aboutMe-img img{
+  max-width: 300px;
+  border-radius: 12px;
+  padding:5px;
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
+}
+
+#aboutMe-img img:hover{
+  box-shadow: 10px 10px 50px #0077be;
+  transition: 0.3s;
+  scale: 1.05;
+}
+
+@keyframes showText {
+  0%{
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100%{
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+/*media query da section */
+@media (max-width: 768px){
+  #aboutMe {
+    padding:1rem;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  #aboutMe img {
+    max-width: 35%;
+    margin: auto;
+  }
+}
+
+/*FORMAÇÃO ACADEMICA */
+#academicBackground {
+  border-top: 1px solid rgba(0,188,212,0.3);
+  background-color: #0b1220;
+  font-family: "Orbitron", sans-serif;
+}
+
+#formations {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+#academicBackground h2 {
+  color: #00bcd4;
+  letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 1rem;
+  padding:1rem;
+  animation: fadeInTop 1s ease-in-out;
+}
+
+#academy h3,
+#course h3{
+  color: #00bcd4;
+  font-weight: bolder;
+}
+
+#academy, #course {
+  color: #e0f7fa;
+  max-width: 40%;
+  border: 4px solid #00f0ff;
+  border-radius: 12px;
+  padding:2rem;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.2);
+  margin-bottom: 3rem;
+
+}
+
+#academy:hover, #course:hover{
+transform: translateY(-5px);
+}
+
+@keyframes fadeInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media query da section FORMACOES */
+@media (max-width: 768px) {
+  #formations {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #academy, #course {
+    max-width: 90%;
+  }
+}
+
+/* PORTFÓLIOO */
+/*Estilização do Botão! */
+#showWorks{
+  background-color: #00f0ff;
+  padding: 1rem 2rem;
+  border:none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: #0b1220;
+  font-family: "Orbitron", sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  box-shadow: 0 0 12px #00f0ff, 0 0 24px #00f0ff80;
+  animation: pulse 2s infinite ease-in-out;
+  margin-bottom: 3rem;
+}
+
+#showWorks:hover{
+  background-color: #0d9bdb;
+}
+@keyframes pulse {
+  0%   { transform: scale(1); box-shadow: 0 0 10px #00f0ff55; }
+  50%  { transform: scale(1.05); box-shadow: 0 0 20px #00f0ff; }
+  100% { transform: scale(1); box-shadow: 0 0 10px #00f0ff55; }
+}
+
+/* De volta a section */
+#aboutWorks {
+  background-color: #0b1220;
+  font-family: "Orbitron", sans-serif;
+  border-top: 1px solid rgba(0,188,212,0.3);
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,188,212,0.3);
+}
+
+#aboutWorks h2 {
+  text-align: center;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+
+.projectCards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+   margin-bottom: 3rem;
+}
+
+.card {
+  border: 2px solid #00f0ff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 240, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  color: #e0f7fa;
+  text-align: center;
+  max-width: 400px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+
+}
+
+.card h3{
+  color: #00bcd4;
+}
+
+.card a {
+  color: #00f0ff;
+  text-decoration: none;
+}
+
+.card a:hover{
+  color: #007acc ;
+  box-shadow: 0 0 12px rgba(13, 155, 219, 0.4);
+  transform: scale(1.05);
+  transition: all 0.3s ease;
+}
+
+.card img {
+  max-width: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.1);
+  transition: transform 0.3s ease;
+
+}
+
+.card:hover img {
+  transform: scale(1.03);
+}
+
+/*Classes para a animação de entrada dos cards */
+.hidden{
+  display: none;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/*Formulário*/
+#contact {
+  font-family: "Orbitron",sans-serif;
+  color: #00f0ff;
+  padding: 10px;
+   background: linear-gradient(180deg, #0a0f2c, #0b1220, #050509);
+}
+
+#contactDiv {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #0a0f2c, #0b1220, #050509);
+}
+#contactDiv h2{
+  margin-top: 1rem;
+}
+
+.formCard input,
+.formCard textarea{
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #0b1220; 
+  border: 2px solid #00f0ff; 
+  color: #e0f7fa; 
+  font-size: 1rem;
+  font-family: "Orbitron",sans-serif;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/*Quando os inputs são clicados ou entram em foco */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #0d9bdb; 
+  box-shadow: 0 0 10px #00f0ff80;
+  background-color: #101d30; 
+}
+
+
+/*Botão de envio */
+#formBtn {
+  background-color: #00f0ff;
+  color: #0b1220;
+  padding: 1rem 2rem;
+  font-family: "Orbitron", sans-serif;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 0 12px #00f0ff;
+  transition: all 0.3s ease;
+}
+
+#formBtn:hover {
+  background-color: #0d9bdb;
+  box-shadow: 0 0 16px #00f0ff;
+}
+
+/*footer */
+#footer {
+  background-color: #050509;
+  color: #e0f7fa;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 0.9rem;
+  border-top: 2px solid rgba(0, 188, 212, 0.1);
+  user-select: none;
+}
+
+

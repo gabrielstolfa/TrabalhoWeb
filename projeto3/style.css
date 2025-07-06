@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff8f0;
+    color: #4b2e2e;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #d84315;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2.5em;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main {
+    padding: 30px 20px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.menu {
+    margin-bottom: 50px;
+}
+
+.menu h2 {
+    color: #bf360c;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 18px;
+    text-align: left;
+    border-bottom: 1px solid #ffccbc;
+}
+
+th {
+    background-color: #ff7043;
+    color: white;
+    font-size: 1.1em;
+}
+
+td img {
+    vertical-align: middle;
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+button {
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+/* Botão de remover item - com margem maior */
+button.remove-btn {
+    margin-left: 20px;
+}
+
+/* Botão Finalizar Pedido */
+#finalizar-pedido {
+    display: block;
+    margin: 30px auto 0 auto;
+    padding: 12px 24px;
+    background-color: #ff5722;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#finalizar-pedido:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+#order {
+    margin-top: 60px;
+    padding: 25px 30px;
+    background-color: #fff3e0;
+    border: 2px dashed #ff8a65;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+#order h2 {
+    color: #d84315;
+    margin-bottom: 15px;
+}
+
+#order ul {
+    list-style: none;
+    padding: 0;
+}
+
+#order li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #ffd8c1;
+}
+
+#total {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #bf360c;
+    text-align: right;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #d84315;
+    color: white;
+    margin-top: 40px;
+    font-size: 0.9em;
+}

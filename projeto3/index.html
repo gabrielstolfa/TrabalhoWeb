@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lanchonete - Rizzi!</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo à Lanchonete!</h1>
+    </header>
+    
+    <main>
+        <section class="menu">
+            <h2>Cardápio</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Preço</th>
+                        <th>Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="https://img.icons8.com/color/50/000000/hamburger.png" alt="Hambúrguer">
+                            Hambúrguer
+                        </td>
+                        <td>R$15</td>
+                        <td><button id="addHamburguer">Adicionar</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://img.icons8.com/color/50/000000/french-fries.png" alt="Batata Frita">
+                            Batata Frita
+                        </td>
+                        <td>R$8</td>
+                        <td><button id="addBatataFrita">Adicionar</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src='https://img.icons8.com/color/50/000000/coca-cola.png' alt="Refrigerante">
+                            Refrigerante
+                        </td>
+                        <td>R$5</td>
+                        <td><button id="addRefrigerante">Adicionar</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://img.icons8.com/color/50/000000/milkshake.png" alt="Milkshake">
+                            Milkshake
+                        </td>
+                        <td>R$10</td>
+                        <td><button id="addMilkshake">Adicionar</button></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="https://img.icons8.com/color/50/000000/sandwich.png" alt="Sanduíche Natural">
+                            Sanduíche Natural
+                        </td>
+                        <td>R$12</td>
+                        <td><button id="addSanduiche">Adicionar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="order">
+            <h2>Seu Pedido:</h2>
+            <ul id="order-list">
+                <!-- Itens adicionados via JavaScript -->
+            </ul>
+            <p>Total: R$<span id="total">0</span></p>
+            <button id="clear-order">Limpar Pedido</button>
+            <button id="finish-order">Finalizar Pedido</button> <!-- AGORA CENTRALIZADO -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Lanchonete. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
