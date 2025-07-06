@@ -70,7 +70,7 @@ header{
     align-items: center;
     justify-content: center;
     gap:3rem;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 /*Estilizando os links */
@@ -166,7 +166,7 @@ header{
 }
 
 #aboutMe-img img{
-  max-width: 300px;
+  max-width: 400px;
   border-radius: 12px;
   padding:5px;
   box-shadow: 0 0 20px rgba(0, 188, 212, 0.4);
